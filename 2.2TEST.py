@@ -1,16 +1,13 @@
 import unittest
 
-
 class MyTestCase(unittest.TestCase):
     def test_something(self):
         self.assertEqual(True, False)  # add assertion here
-
 
 if __name__ == '__main__':
     unittest.main()
 import unittest
 from isogram import is_isogram
-
 
 class TestIsIsogram(unittest.TestCase):
     def test_empty_string(self):
@@ -46,7 +43,6 @@ class TestIsIsogram(unittest.TestCase):
         # Repeated non-alphabetic characters should be ignored in the isogram check
         self.assertTrue(is_isogram("abc-def!"))
         self.assertTrue(is_isogram("abc_def!"))
-
 
 if __name__ == '__main__':
     unittest.main()
