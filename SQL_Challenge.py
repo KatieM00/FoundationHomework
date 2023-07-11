@@ -97,3 +97,27 @@ VALUES
     (19, 8, 4, '15:00:00', 24), 
     
     """
+with open(file_path, "a") as sql_file:
+    sql_statements = """
+    SELECT Movie_Name, Start_Time
+FROM movie_info
+JOIN showings ON movie_info.Movie_ID = showings.Movie_ID
+WHERE Start_Time > '12:00:00' AND Available_Seats > 0
+ORDER BY Start_Time;
+
+"""
+with open(file_path, "a") as sql_file:
+    sql_statements = """
+SELECT Movie_Name
+FROM movie_info
+JOIN showings ON movie_info.Movie_ID = showings.Movie_ID
+GROUP BY movie_info.Movie_ID, Movie_Name
+HAVING COUNT(*) = (
+    SELECT MAX(showing_count)
+    FROM (
+        SELECT COUNT(*) AS showing_count
+        FROM showings
+        GROUP BY Movie_ID
+    ) AS counts
+);
+"""
