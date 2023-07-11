@@ -1,0 +1,116 @@
+Foundation assessment: 2
+1.1 What does SDLC stand for?	1 mark
+Answer:
+
+SDLC stands for Software Development Life Cycle.
+
+1.2 What exception is thrown when you divide a number by 0?	1 mark
+Answer:
+
+Dividing a number by zero will raise a "ZeroDivisionError" exception and the error message will be printed as "Error: division by zero."
+
+1.3 What is the git command that moves code from the local repository to the remote repository?	1 mark
+Answer:
+
+git push
+
+
+1.4 What does NULL represent in a database? 	1 mark
+Answer:
+
+NULL represents the absence of a value or the lack of a value in a particular field or column. It is used to indicate that the data in that field is unknown, missing, or not applicable. It is also different from an empty string ('') or zero (0). It signifies the absence of any value, whereas an empty string or zero are specific values that can be stored in a field.
+
+
+1.5 Name 2 responsibilities of the Scrum Master	2 marks
+Answer:
+
+Facilitating the Scrum Process: The Scrum Master is responsible for ensuring that the Scrum framework is understood and implemented effectively. Such as daily stand-up meetings, sprint planning, sprint review, and sprint retrospective.
+
+Removing Impediments: The Scrum Master identifies and addresses any obstacles or impediments that hinder the progress of the Scrum team. They help to remove barriers and create a conducive environment for the team to work efficiently, which involves identifying issues that impact productivity, resolving conflicts, coordinating with stakeholders, and ensuring that the team has the necessary resources and support.
+
+
+
+
+
+1.6 Name 2 debugging methods and when you would use them.	4 marks
+Answer:
+
+Logging: Logging involves inserting statements or using logging frameworks to record specific events or messages during the execution of your code. Instead of printing to the console, you can log messages to a log file or a designated logging system. Logging allows you to capture information, warnings, errors, and other relevant details that can help you trace the execution flow and identify issues. Logging is useful for both development and production environments as it provides a persistent record of events that can be analysed later.
+
+Unit Testing: Unit testing is a systematic approach to testing individual units or components of your code in isolation. By writing test cases that cover various scenarios and expected outcomes, you can verify the correctness of your code and identify potential issues. Unit tests help you catch bugs early in the development process but also validate changes and improvements over time. Running unit tests can pinpoint the specific areas where your code may be behaving unexpectedly or not meeting the desired functionality.
+
+
+1.7 Looking at the following code, describe a case where this function would throw an error when called. Describe this case and talk about what exception handling you’ll need.
+
+def can_pay(price, cash_given):
+   if cash_given >= price:
+       return True
+   else:
+       return False
+	5 marks
+Answer:
+
+One potential scenario where this function could throw an error is when either the price or cash_given argument is not a numeric value. For example, if the price argument is a string or the cash_given argument is a list, the comparison cash_given >= price would raise a TypeError because the operands cannot be compared using the >= operator. To handle this potential error, you can implement exception handling using a try-except block.
+
+    except TypeError:
+        return False
+
+A try-except block is used to catch the TypeError exception. If a TypeError occurs during the execution of the code within the try block, the code will exit the block and execute the code within the except block. In this case, it simply returns False to indicate that the payment cannot be made due to invalid input.
+
+
+
+
+
+
+1.8 What is git branching? Explain how it is used in Git	6 marks
+Answer:
+
+Branching is the process of creating separate lines of development that allow you to work on different features, bug fixes, or experiments without affecting the main codebase. It allows multiple parallel versions of your code to coexist, enabling collaborative and isolated development.
+
+Uses:
+
+Feature Development: When working on a new feature or functionality, you can create a separate branch to isolate your changes. This allows you to work on the feature independently without interfering with the main codebase. Once the feature is complete and tested, it can be merged back into the main branch.
+
+Bug Fixing: Branches are commonly used to fix bugs or issues in the code. By creating a new branch specifically for the bug fix, you can address the problem without affecting the stable version. Once the fix is complete, the branch can be merged back into the main branch or the appropriate release branch.
+
+Experimentation: Branching also facilitates experimentation and prototyping. You can create a branch to explore new ideas, test different approaches, or make significant changes to the codebase without the risk of impacting the main branch. If the experiment is successful, the changes can be merged into the main branch or discarded if they prove unsuccessful.
+
+
+1.9 Design a restaurant ordering system.  You do not need to write code, but describe a high-level approach:
+a.	Draw a list of key requirements
+b.	What are your main considerations and problems?
+c.	What components or tools would you potentially use?	10 marks
+Answer:
+
+a. List of key requirements:
+
+•	Ability to create and manage menus, including adding and updating items.
+•	Ability for customers to browse the menu, select items, and place orders.
+•	Order management system for the restaurant staff to receive and process orders.
+•	Support for multiple customers placing orders simultaneously.
+•	Ability to track order status and notify customers of updates.
+•	Payment processing functionality.
+•	Reporting and analytics to track sales, popular items, etc.
+
+b. Main considerations and problems:
+
+•	Ensuring a user-friendly interface for customers to browse and place orders.
+•	Efficient order management to handle multiple orders concurrently and prevent conflicts.
+•	Handling various payment methods securely and reliably.
+•	Managing inventory and updating it as orders are placed.
+•	Ensuring scalability and performance to handle high order volumes during peak times.
+•	Designing a robust and fault-tolerant system to handle errors and failures.
+
+c. Potential components or tools:
+
+•	Backend server or framework (e.g., Django, Flask) to handle business logic and database operations.
+•	Database management system (e.g., MySQL) to store menu items, orders, and other relevant data.
+•	Frontend development frameworks for building a user-friendly and responsive customer interface.
+•	Payment gateway integration (e.g., Stripe, PayPal) for secure and reliable payment processing.
+•	Queueing systems for order management and processing.
+•	Real-time communication tools for notifying customers of order updates.
+•	Analytics and reporting tools (e.g., Google Analytics, Chart.js) for tracking and analysing order data.
+
+
+
+
